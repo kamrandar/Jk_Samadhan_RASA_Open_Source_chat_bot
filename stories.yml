@@ -1,0 +1,292 @@
+version: "3.1"
+
+stories:
+
+# Happy Path
+- story: happy_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+# Sad Path 1
+- story: sad_path_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+# Sad Path 2
+- story: sad_path_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+
+
+# Hindi
+# Happy Path
+- story: happy_path_hindi
+  steps:
+  - intent: greet_hindi
+  - action: utter_greet_hindi
+  - intent: mood_great_hindi
+  - action: utter_happy_hindi
+
+# Sad Path 1
+- story: sad_path_1_hindi
+  steps:
+  - intent: greet_hindi
+  - action: utter_greet_hindi
+  - intent: mood_unhappy_hindi
+  - action: utter_cheer_up_hindi
+  - action: utter_did_that_help_hindi
+  - intent: affirm_hindi
+  - action: utter_happy_hindi
+
+# Sad Path 2
+- story: sad_path_2_hindi
+  steps:
+  - intent: greet_hindi
+  - action: utter_greet_hindi
+  - intent: mood_unhappy_hindi
+  - action: utter_cheer_up_hindi
+  - action: utter_did_that_help_hindi
+  - intent: deny_hindi
+  - action: utter_goodbye
+
+
+#Urdu
+# Happy Path
+- story: happy_path_urdu
+  steps:
+  - intent: greet_urdu
+  - action: utter_greet_urdu
+  - intent: mood_great_urdu
+  - action: utter_happy_urdu
+
+# Sad Path 1
+- story: sad_path_1_urdu
+  steps:
+  - intent: greet_urdu
+  - action: utter_greet_urdu
+  - intent: mood_unhappy_urdu
+  - action: utter_cheer_up_urdu
+  - action: utter_did_that_help_urdu
+  - intent: affirm_urdu
+  - action: utter_happy_urdu
+
+# Sad Path 2
+- story: sad_path_2_urdu
+  steps:
+  - intent: greet_urdu
+  - action: utter_greet_urdu
+  - intent: mood_unhappy_urdu
+  - action: utter_cheer_up_urdu
+  - action: utter_did_that_help_urdu
+  - intent: deny_urdu
+  - action: utter_goodbye
+
+
+
+
+# Stories for JK Samadhan
+
+- story: reg_grev_jk_samadhan
+  steps:
+  - intent: jk_samadhan_Reg_grev
+  - action: utter_Reg_grev_jk_samadhan
+
+- story: reg_grev_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_Reg_grev_hindi
+  - action: utter_Reg_grev_jk_samadhan_hindi
+
+- story: reg_grev_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_Reg_grev_urdu
+  - action: utter_Reg_grev_jk_samadhan_urdu
+
+- story: track_grev_jk_samadhan
+  steps:
+  - intent: jk_samadhan_track_grev
+  - action: utter_track_grev_jk_samadhan
+
+- story: track_grev_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_track_grev_hindi
+  - action: utter_track_grev_jk_samadhan_hindi
+
+- story: track_grev_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_track_grev_urdu
+  - action: utter_track_grev_jk_samadhan_urdu
+
+- story: lodge_grev_jk_samadhan
+  steps:
+  - intent: jk_samadhan_lodge_grev
+  - action: utter_lodge_grev_jk_samadhan
+
+- story: lodge_grev_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_lodge_grev_hindi
+  - action: utter_lodge_grev_jk_samadhan_hindi
+
+- story: lodge_grev_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_lodge_grev_urdu
+  - action: utter_lodge_grev_jk_samadhan_urdu
+
+- story: happens_when_lodge_grev_jk_samadhan
+  steps:
+  - intent: jk_samadhan_happens_when_lodge_grev
+  - action: utter_happens_when_lodge_grev_jk_samadhan
+
+- story: happens_when_lodge_grev_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_happens_when_lodge_grev_hindi
+  - action: utter_happens_when_lodge_grev_jk_samadhan_hindi
+
+- story: happens_when_lodge_grev_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_happens_when_lodge_grev_urdu
+  - action: utter_happens_when_lodge_grev_jk_samadhan_urdu
+
+- story: how_grev_dealt_jk_samadhan
+  steps:
+  - intent: jk_samadhan_how_grev_dealt
+  - action: utter_how_grev_dealt_jk_samadhan
+
+- story: how_grev_dealt_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_how_grev_dealt_hindi
+  - action: utter_how_grev_dealt_jk_samadhan_hindi
+
+- story: how_grev_dealt_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_how_grev_dealt_urdu
+  - action: utter_how_grev_dealt_jk_samadhan_urdu
+
+- story: after_redress_can_grev_reopend_jk_samadhan
+  steps:
+  - intent: jk_samadhan_after_redress_can_grev_reopend
+  - action: utter_after_redress_can_grev_reopend_jk_samadhan
+
+- story: after_redress_can_grev_reopend_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_after_redress_can_grev_reopend_hindi
+  - action: utter_after_redress_can_grev_reopend_jk_samadhan_hindi
+
+- story: after_redress_can_grev_reopend_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_after_redress_can_grev_reopend_urdu
+  - action: utter_after_redress_can_grev_reopend_jk_samadhan_urdu
+
+- story: what_type_grev_not_taken_jk_samadhan
+  steps:
+  - intent: jk_samadhan_what_type_grev_not_taken
+  - action: utter_what_type_grev_not_taken_jk_samadhan
+
+- story: what_type_grev_not_taken_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_what_type_grev_not_taken_hindi
+  - action: utter_what_type_grev_not_taken_jk_samadhan_hindi
+
+- story: what_type_grev_not_taken_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_what_type_grev_not_taken_urdu
+  - action: utter_what_type_grev_not_taken_jk_samadhan_urdu
+
+- story: role_of_DoPG_concer_DDO_jk_samadhan
+  steps:
+  - intent: jk_samadhan_role_of_DoPG_concer_DDO
+  - action: utter_role_of_DoPG_concer_DDO_jk_samadhan
+
+- story: role_of_DoPG_concer_DDO_jk_samadhan_hindi
+  steps:
+  - intent: jk_samadhan_role_of_DoPG_concer_DDO_hindi
+  - action: utter_role_of_DoPG_concer_DDO_jk_samadhan_hindi
+
+- story: role_of_DoPG_concer_DDO_jk_samadhan_urdu
+  steps:
+  - intent: jk_samadhan_role_of_DoPG_concer_DDO_urdu
+  - action: utter_role_of_DoPG_concer_DDO_jk_samadhan_urdu
+
+- story: Lodge Grievance
+  steps:
+  - intent: lodge_grievance
+  - action: utter_grievance_prompt
+  - intent: lodge_grievance
+  - action: utter_lodge_grev_jk_samadhan
+
+- story: Lodge Grievance_hindi
+  steps:
+  - intent: lodge_grievance_hindi
+  - action: utter_grievance_prompt_hindi
+  - intent: lodge_grievance_hindi
+  - action: utter_lodge_grev_jk_samadhan_hindi
+
+- story: Lodge Grievance_urdu
+  steps:
+  - intent: lodge_grievance_urdu
+  - action: utter_grievance_prompt_urdu
+  - intent: lodge_grievance_urdu
+  - action: utter_lodge_grev_jk_samadhan_urdu
+
+- story: Track Issue
+  steps:
+  - intent: track_issue
+  - action: utter_grievance_prompt
+  - intent: track_issue
+  - action: utter_track_grev_jk_samadhan
+
+- story: Track Issue_hindi
+  steps:
+  - intent: track_issue_hindi
+  - action: utter_grievance_prompt_hindi
+  - intent: track_issue_hindi
+  - action: utter_track_grev_jk_samadhan_hindi
+
+- story: Track Issue_urdu
+  steps:
+  - intent: track_issue_urdu
+  - action: utter_grievance_prompt_urdu
+  - intent: track_issue_urdu
+  - action: utter_track_grev_jk_samadhan_urdu
+
+- story: get contact details of DoPG
+  steps:
+  - intent: jk_samadhan_contact_details
+  - action: utter_provide_Which_Division
+  - intent: give_option
+  - action: action_handle_options
+
+- story: get contact details of DoPG_hindi
+  steps:
+  - intent: jk_samadhan_contact_details_hindi
+  - action: utter_provide_Which_Division_hindi
+  - intent: give_option_hindi
+  - action: action_handle_options_hindi
+
+- story: get contact details of DoPG_urdu
+  steps:
+  - intent: jk_samadhan_contact_details_urdu
+  - action: utter_provide_Which_Division_urdu
+  - intent: give_option_urdu
+  - action: action_handle_options_urdu
+
+- story: choose option direct path
+  steps:
+  - intent: give_option
+  - action: action_handle_options

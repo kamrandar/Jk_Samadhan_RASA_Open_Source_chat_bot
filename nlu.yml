@@ -1,0 +1,620 @@
+version: "3.1"
+
+nlu:
+
+
+# Regex for options
+- regex: option
+  examples: |
+    - \d{1,2}
+
+# Intent: give_option
+- intent: give_option
+  examples: |
+    - [۔](option)
+    - [۱](option)
+
+- intent: give_option_hindi
+  examples: |
+    - [०](option)
+    - [१](option)
+
+- intent: give_option_urdu
+  examples: |
+    - [0](option)
+    - [](option)
+
+# Intent: greet
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: greet_hindi
+  examples: |
+    - नमस्ते
+    - हेलो
+    - हाय
+    - सुप्रभात
+    - शुभ संध्या
+    - हेलो वहाँ
+    - चलो चलते हैं
+    - नमस्कार
+    - सुप्रभात
+
+- intent: greet_urdu
+  examples: |
+    - ہیلو
+    - ہائے
+    - صبح بخیر
+    - شام بخیر
+    - ہیلو وہاں
+    - چلو چلتے ہیں
+    - السلام علیکم
+    - صبح بخیر
+
+# Intent: goodbye
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - خدا حافظ
+    - پھر ملیں گے
+    - شب بخیر
+    - الوداع
+    - آپ کا دن اچھا گزرے
+    - بائے بائے
+    - پھر ملیں گے
+    - अलविदा
+    - फिर मिलेंगे
+    - शुभ रात्रि
+    - बाय
+    - गुडबाय
+    - आपका दिन शुभ हो
+    - फिर मिलेंगे
+    - बाय बाय
+
+
+
+  
+
+# Intent: affirm
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: affirm_hindi
+  examples: |
+    - हाँ
+    - हाँ, बिलकुल
+    - सही
+    - बिल्कुल सही
+    - ज़रूर
+    - ठीक है
+
+- intent: affirm_urdu
+  examples: |
+    - جی ہاں
+    - ہاں بالکل
+    - صحیح
+    - بالکل صحیح
+    - ضرور
+    - ٹھیک ہے
+
+# Intent: deny
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: deny_hindi
+  examples: |
+    - नहीं
+    - बिल्कुल नहीं
+    - कभी नहीं
+    - मुझे नहीं लगता
+    - मुझे यह पसंद नहीं है
+    - बिल्कुल नहीं
+
+- intent: deny_urdu
+  examples: |
+    - نہیں
+    - بالکل نہیں
+    - کبھی نہیں
+    - مجھے نہیں لگتا
+    - مجھے یہ پسند نہیں ہے
+    - بالکل نہیں
+
+# Intent: mood_great
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_great_hindi
+  examples: |
+    - परफेक्ट
+    - महान
+    - अद्भुत
+    - राजा जैसा महसूस कर रहा हूँ
+    - शानदार
+    - मैं बहुत अच्छा महसूस कर रहा हूँ
+    - मैं महान हूँ
+    - मैं अद्भुत हूँ
+    - मैं दुनिया को बचाने जा रहा हूँ
+    - बहुत अच्छा
+    - बहुत बहुत अच्छा
+    - बहुत परफेक्ट
+    - बहुत अच्छा
+    - बहुत परफेक्ट
+
+- intent: mood_great_urdu
+  examples: |
+    - بہترین
+    - عظیم
+    - حیرت انگیز
+    - بادشاہ کی طرح محسوس کر رہا ہوں
+    - شاندار
+    - میں بہت اچھا محسوس کر رہا ہوں
+    - میں عظیم ہوں
+    - میں حیرت انگیز ہوں
+    - میں دنیا کو بچانے جا رہا ہوں
+    - بہت خوش
+    - بہت اچھا
+    - بہت کامل
+    - بہت اچھا
+    - بہت کامل
+
+# Intent: mood_unhappy
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: mood_unhappy_hindi
+  examples: |
+    - मेरा दिन भयानक था
+    - मैं दुखी हूँ
+    - मैं अच्छा महसूस नहीं कर रहा हूँ
+    - मैं निराश हूँ
+    - बहुत दुखी
+    - मैं बहुत दुखी हूँ
+    - दुखी
+    - बहुत दुखी
+    - खुश नहीं
+    - अच्छा नहीं
+    - बहुत अच्छा नहीं
+    - बेहद दुखी
+    - बहुत दुखी
+
+- intent: mood_unhappy_urdu
+  examples: |
+    - میرا دن خوفناک تھا
+    - میں اداس ہوں
+    - میں اچھا محسوس نہیں کر رہا ہوں
+    - میں مایوس ہوں
+    - بہت اداس
+    - میں بہت اداس ہوں
+    - اداس
+    - بہت اداس
+    - ناخوش
+    - اچھا نہیں
+    - بہت اچھا نہیں
+    - انتہائی اداس
+    - بہت اداس
+
+# Intent: bot_challenge
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who build you
+    - how were you build
+    - what is your name
+    - who are you
+    - क्या आप एक बॉट हैं?
+    - क्या आप एक मानव हैं?
+    - क्या मैं एक बॉट से बात कर रहा हूँ?
+    - क्या मैं एक मानव से बात कर रहा हूँ?
+    - आपको किसने बनाया
+    - आप कैसे बनाए गए थे
+    - आपका नाम क्या है
+    - आप कौन हैं
+    - کیا آپ ایک بوٹ ہیں؟
+    - کیا آپ ایک انسان ہیں؟
+    - کیا میں ایک بوٹ سے بات کر رہا ہوں؟
+    - کیا میں ایک انسان سے بات کر رہا ہوں؟
+    - آپ کو کس نے بنایا
+    - آپ کیسے بنائے گئے تھے
+    - آپ کا نام کیا ہے
+    - آپ کون ہیں
+
+
+#Where can the grievances be registered/sent?
+- intent: jk_samadhan_Reg_grev
+  examples: |
+    - Where can the grievances be registered/sent
+    - Where can the grievances be Registered/Sent
+    - Where can the Grievances be registered/sent
+    - Where can the Grievances be Registered/Sent
+    - i want to register grievances
+    - where to register grievances
+    - How can grievances be registered or sent?
+    - Where should grievances be submitted?
+    - What is the process for sending grievances?
+    - Where can I file or register a grievance?
+    - What are the options for submitting grievances?
+
+- intent: jk_samadhan_Reg_grev_hindi
+  examples: |
+    - शिकायतें कैसे दर्ज या भेजी जा सकती हैं?
+    - शिकायतें कहाँ दर्ज की जानी चाहिए?
+    - शिकायतें भेजने की प्रक्रिया क्या है?
+    - मैं शिकायत कहां दर्ज कर सकता हूं?
+    - शिकायतें दर्ज करने के लिए क्या विकल्प हैं?
+
+
+- intent: jk_samadhan_Reg_grev_urdu
+  examples: |
+    - شکایات کیسے درج کی جا سکتی ہیں یا بھیجی جا سکتی ہیں؟
+    - شکایات کہاں جمع کرائی جائیں؟
+    - شکایات بھیجنے کا طریقہ کیا ہے؟
+    - میں شکایت کہاں درج کر سکتا ہوں؟
+    - شکایات جمع کرانے کے کیاطریقے  ہیں؟
+
+
+
+#What are the contact details of Department of Public Grievances, J&K?
+
+- intent: jk_samadhan_contact_details
+  examples: |
+    - I want contact details
+    - Can you provide contact information?
+    - Contact details
+    - Can I get the contact information?
+    - What are the contact details of the Department of Public Grievances
+    - contact details of D0PG
+    - Contact details of  Department of Public Grievances
+    - What are the contact details of DoPG
+    - Give me the contact details
+    - Contact information
+    - How can I get in touch with the Department of Public Grievances in J&K?
+    - Could you provide the contact information for the Department of Public Grievances, J&K?
+    - Where can I find the contact details for the J&K Department of Public Grievances?
+    - What is the phone number and email address for the Department of Public Grievances in Jammu & Kashmir?
+    - How do I contact the Public Grievances Department in J&K?
+
+- intent: jk_samadhan_contact_details_hindi
+  examples: |
+    - मैं जम्मू-कश्मीर में लोक शिकायत विभाग से कैसे संपर्क कर सकता हूं?
+    - क्या आप लोक शिकायत विभाग, जम्मू-कश्मीर के लिए संपर्क जानकारी प्रदान कर सकते हैं?
+    - मुझे जम्मू-कश्मीर लोक शिकायत विभाग के लिए संपर्क विवरण कहां मिल सकता है?
+    - जम्मू-कश्मीर में लोक शिकायत विभाग के लिए फ़ोन नंबर और ईमेल आईडी क्या है?
+    - मैं जम्मू-कश्मीर में लोक शिकायत विभाग से कैसे संपर्क करूं?
+
+- intent: jk_samadhan_contact_details_urdu
+  examples: |
+    - "میں جموں و کشمیر میں عوامی شکایات کے محکمے سے کیسے رابطہ کر سکتا ہوں؟"
+    - "کیا آپ محکمہ عوامی شکایات، جموں و کشمیر کے لیے رابطہ کی معلومات فراہم کر سکتے ہیں؟"
+    - "مجھے جے اینڈ کے محکمہ عوامی شکایات کے لیے رابطہ کی تفصیلات کہاں سے مل سکتی ہیں؟"
+    - "جموں و کشمیر میں عوامی شکایات کے محکمے کا فون نمبر اور ای میل پتہ کیا ہے؟"
+    - "میں جموں و کشمیر میں عوامی شکایات کے محکمے سے کیسے رابطہ کروں؟"
+
+
+
+
+# How do I lodge the grievance?
+- intent: jk_samadhan_lodge_grev
+  examples: |
+    - How do I lodge the grievance
+    - how can i lodge my greivance 
+    - I want to lodge
+    - I need to file a complaint
+    - I have a complaint
+    - Lodge a grievance
+    - File a complaint
+    - What is the procedure to lodge a grievance?
+    - How can I officially register a grievance?
+
+
+- intent: jk_samadhan_lodge_grev_hindi
+  examples: |
+    - शिकायत दर्ज करने की प्रक्रिया क्या है?
+    - मैं शिकायत कैसे दर्ज कर सकता हूँ?
+    - शिकायत दर्ज करने के लिए मुझे किन चरणों का पालन करना होगा?
+    - मैं शिकायत दर्ज कराने कहां जाऊं?
+    - मैं आधिकारिक तौर पर शिकायत कैसे दर्ज कर सकता हूँ?
+
+
+
+- intent: jk_samadhan_lodge_grev_urdu
+  examples: |
+    - "شکایت درج کرانے کا طریقہ کیا ہے؟"
+    - "میں شکایت کیسے درج کر سکتا ہوں؟"
+    - "شکایت درج کرانے کے لیے مجھے کن اقدامات پر عمل کرنے کی ضرورت ہے؟"
+    - "میں شکایت درج کرانے کہاں جاؤں؟"
+    - "میں سرکاری طور پر شکایت کیسے درج کر سکتا ہوں؟"
+
+
+# How do I track my grievance?
+- intent: jk_samadhan_track_grev
+  examples: |
+    - How do I track my grievance
+    - how can i track my greivance 
+    - i want to track a grievance 
+    - What is the process for tracking my grievance?
+    - How can I check the status of my grievance?
+    - Where can I find updates on my grievance?
+    - How do I monitor the progress of my grievance?
+    - What are the steps to follow for tracking a lodged grievance?
+
+
+- intent: jk_samadhan_track_grev_hindi
+  examples: |
+    - "मेरी शिकायत पर नज़र रखने की प्रक्रिया क्या है?"
+    - "मैं अपनी शिकायत की स्थिति कैसे जांच सकता हूं?"
+    - "मुझे अपनी शिकायत पर अपडेट कहां मिल सकता है?"
+    - "मैं अपनी शिकायत की प्रगति की निगरानी कैसे करूँ?"
+    - "दर्ज की गई शिकायत पर नज़र रखने के लिए किन चरणों का पालन करना होगा?"
+
+- intent: jk_samadhan_track_grev_urdu
+  examples: |
+    - "میری شکایت کا پتہ لگانے کا طریقہ کیا ہے؟"
+    - "میں اپنی شکایت کی حیثیت کیسے چیک کرسکتا ہوں؟"
+    - "میں اپنی شکایت پر اپ ڈیٹس کہاں سے حاصل کر سکتا ہوں؟"
+    - "میں اپنی شکایت کی پیش رفت کی نگرانی کیسے کروں؟"
+    - "درج کرائی گئی شکایت کا سراغ لگانے کے لیے کن اقدامات کی پیروی کرنی ہے؟"
+
+
+# What happens when I lodge the grievance?
+- intent: jk_samadhan_happens_when_lodge_grev
+  examples: |
+    - What happens when I lodge the grievance
+    - what happens to lodged grievance
+    - What is the process after I lodge a grievance?
+    - What steps are taken once a grievance is lodged?
+    - What should I expect after submitting a grievance?
+    - How is a grievance handled after it is lodged?
+    - What happens next after I file a grievance?
+    - How can I file a grievance?
+    - What steps do I need to follow to lodge a grievance?
+    
+   
+
+
+
+- intent: jk_samadhan_happens_when_lodge_grev_hindi
+  examples: |
+    - "शिकायत दर्ज कराने के बाद की प्रक्रिया क्या है?"
+    - "शिकायत दर्ज होने के बाद क्या कदम उठाए जाते हैं?"
+    - "शिकायत दर्ज करने के बाद मुझे क्या उम्मीद करनी चाहिए?"
+    - "शिकायत दर्ज होने के बाद उसका निपटारा कैसे किया जाता है?"
+    - "मेरे द्वारा शिकायत दर्ज करने के बाद आगे क्या होता है?"
+
+
+
+- intent: jk_samadhan_happens_when_lodge_grev_urdu
+  examples: |
+    - "شکایت درج کروانے کے بعد کیا عمل ہوتا ہے؟"
+    - "ایک بار شکایت درج ہونے کے بعد کیا اقدامات کیے جاتے ہیں؟"
+    - "شکایت جمع کرانے کے بعد مجھے کیا امید رکھنی چاہیے؟"
+    - "شکایت درج ہونے کے بعد اسے کیسے نمٹا جاتا ہے؟"
+    - "شکایت درج کروانے کے بعد آگے کیا ہوتا ہے؟"
+
+
+#What happens to the grievances? How are the grievances dealt with?
+- intent: jk_samadhan_how_grev_dealt
+  examples: |
+    - How are the grievances dealt with
+    - what happends to grievances
+    - What is the process for handling grievances?
+    - How are grievances processed and resolved?
+    - What steps are taken to address grievances?
+    - How does the organization manage and respond to grievances?
+    - what actions are taken after a grievance is submitted?
+
+- intent: jk_samadhan_how_grev_dealt_hindi
+  examples: |
+    - "शिकायतों से निपटने की प्रक्रिया क्या है?"
+    - "शिकायतों पर कार्रवाई और समाधान कैसे किया जाता है?"
+    - "शिकायतों के समाधान के लिए क्या कदम उठाए गए हैं?"
+    - "संगठन शिकायतों का प्रबंधन और प्रतिक्रिया कैसे करता है?"
+    - "शिकायत प्रस्तुत होने के बाद क्या कार्रवाई की जाती है?"
+
+
+- intent: jk_samadhan_how_grev_dealt_urdu
+  examples: |
+    - "شکایات سے نمٹنے کے لیے کیا طریقہ کار ہے؟"
+    - "شکایات پر کارروائی اور حل کیسے کیا جاتا ہے؟"
+    - "شکایات کے ازالے کے لیے کیا اقدامات کیے جاتے ہیں؟"
+    - "تنظیم شکایات کا انتظام اور جواب کیسے دیتی ہے؟
+    - "شکایت جمع ہونے کے بعد کیا اقدامات کیے جاتے ہیں؟"
+
+
+#After Redressal, can the grievance be re-opened for further correspondence about it having been closed without details etc.?
+
+- intent: jk_samadhan_after_redress_can_grev_reopend
+  examples: |
+    - After redress can the grievance be re-opened for further correspondence about it having been closed without details etc.
+    - can grievance be re-opened that is redressed.
+    - is there any way to reopen redressed grievance.
+    - Can a grievance be re-opened after it has been redressed?
+    - Is it possible to re-open a grievance for further discussion after it has been closed?
+    - Can I request additional information or re-open a grievance that has already been resolved?
+    - What should I do if I need to re-open a grievance that was closed without sufficient details?
+    - Are there provisions for re-opening a grievance for further correspondence after its closure?
+
+- intent: jk_samadhan_after_redress_can_grev_reopend_hindi
+  examples: |
+    - "क्या किसी शिकायत का समाधान हो जाने के बाद उसे दोबारा खोला जा सकता है?"
+    - "क्या किसी शिकायत को बंद करने के बाद आगे की चर्चा के लिए उसे दोबारा खोलना संभव है?"
+    - "क्या मैं अतिरिक्त जानकारी का अनुरोध कर सकता हूं या किसी शिकायत को दोबारा खोल सकता हूं जिसका समाधान पहले ही हो चुका है?"
+    - "यदि मुझे पर्याप्त विवरण के बिना बंद कर दी गई किसी शिकायत को दोबारा खोलने की आवश्यकता हो तो मुझे क्या करना चाहिए?"
+    - "क्या किसी शिकायत के बंद होने के बाद आगे के पत्राचार के लिए उसे दोबारा खोलने का प्रावधान है?"
+
+
+- intent: jk_samadhan_after_redress_can_grev_reopend_urdu
+  examples: |
+    - "کیا شکایت کے ازالے کے بعد اسے دوبارہ کھولا جا سکتا ہے؟"
+    - "کیا شکایت کو بند کرنے کے بعد اسے مزید بحث کے لیے دوبارہ کھولنا ممکن ہے؟"
+    - "کیا میں اضافی معلومات کی درخواست کر سکتا ہوں یا کسی ایسی شکایت کو دوبارہ کھول سکتا ہوں جو پہلے ہی حل ہو چکی ہے؟"
+    - "اگر مجھے کسی ایسی شکایت کو دوبارہ کھولنے کی ضرورت ہو جو کافی تفصیلات کے بغیر بند کر دی گئی ہو تو مجھے کیا کرنا چاہیے؟"
+    - "اگر مجھے کسی مسئلے کو دوبارہ کھولنے کی ضرورت ہو تو کافی تفصیلات کے لیے مجھے بند کر دیا گیا تو کیا کرنا چاہیے؟"
+
+
+#What are the types of grievances which are not taken up for Redressal by DoPG?
+- intent: jk_samadhan_what_type_grev_not_taken
+  examples: |
+    - What are the types of grievances which are not taken up for redress by DoPG.
+    - types of grievances are there not taken up by redress of DoPG.
+    - types of grievances are there not taken up by redress.
+    - which are the grievances not taken up by redress of DoPG.
+    - which are the grievances not done by redress of DoPG.
+    - Which types of grievances are excluded from redressal by the DoPG?
+    - What kinds of grievances does the DoPG not address?
+    - Are there specific grievances that the DoPG does not take up for resolution?
+    - What types of issues are not handled by the DoPG for redressal?
+    - Which grievances are considered ineligible for redressal by the DoPG?
+
+- intent: jk_samadhan_what_type_grev_not_taken_hindi
+  examples: |
+    - "DoPG द्वारा किस प्रकार की शिकायतों को निवारण से बाहर रखा गया है?"
+    - "DoPG किस प्रकार की शिकायतों का समाधान नहीं करता है?"
+    - "क्या ऐसी विशिष्ट शिकायतें हैं जिनका समाधान DoPG द्वारा नहीं किया जाता है?"
+    - "किस प्रकार के मुद्दों का निवारण डीओपीजी द्वारा नहीं किया जाता है?"
+    - "DoPG द्वारा किन शिकायतों को निवारण के लिए अयोग्य माना जाता है?"
+
+
+- intent: jk_samadhan_what_type_grev_not_taken_urdu
+  examples: |
+    - "کس قسم کی شکایات کو DoPG کے ذریعے ازالے سے خارج کر دیا گیا ہے؟"
+    - "DoPG کس قسم کی شکایات کا ازالہ نہیں کرتا؟"
+    - "کیا ایسی مخصوص شکایات ہیں جنہیں ڈی او پی جی حل کرنے کے لیے نہیں لیتا؟"
+    - "ڈی او پی جی کے ذریعے کس قسم کے مسائل کو حل نہیں کیا جاتا ہے؟"
+    - "کون سی شکایات کو ڈی او پی جی کے ذریعے ازالے کے لیے نااہل سمجھا جاتا ہے؟"
+
+
+
+# Intent: jk_samadhan_role_of_DoPG_concer_DDO
+- intent: jk_samadhan_role_of_DoPG_concer_DDO
+  examples: |
+    - What is the role of DoPG with reference to the grievances concerning Departments Districts Organisations
+    - what is the role of D0PG With refrences to DDO 
+    - role of DoPG with refrence to grievances concerning Departments Districts Organisations
+    - role of DoPG with refrence to grievances concerning DDO
+
+- intent: jk_samadhan_role_of_DoPG_concer_DDO_hindi
+  examples: |
+    - "विभागों जिलों संगठनों से संबंधित शिकायतों के संदर्भ में DoPG की क्या भूमिका है?"
+    - "DDO के संदर्भ में DoPG की भूमिका क्या है?"
+    - "विभागों जिलों संगठनों से संबंधित शिकायतों के संदर्भ में DoPG की भूमिका"
+    - "DDO से संबंधित शिकायतों के संदर्भ में DoPG की भूमिका"
+
+- intent: jk_samadhan_role_of_DoPG_concer_DDO_urdu
+  examples: |
+    - "محکموں اضلاع تنظیموں سے متعلق شکایات کے حوالے سے DoPG کا کیا کردار ہے؟"
+    - "DDO کے حوالے سے DoPG کا کردار کیا ہے؟"
+    - "محکموں اضلاع تنظیموں سے متعلق شکایات کے حوالے سے DoPG کا کردار"
+    - "DDO سے متعلق شکایات کے حوالے سے DoPG کا کردار"
+
+# Intent: lodge_grievance
+- intent: lodge_grievance
+  examples: |
+    - Grievance
+    - grievance
+
+- intent: lodge_grievance_hindi
+  examples: |
+    - शिकायत
+    - शिकायत
+
+- intent: lodge_grievance_urdu
+  examples: |
+    - شکایت
+    - شکایت
+
+# Intent: track_issue
+- intent: track_issue
+  examples: |
+    - Track
+    - track Grievance
+    - track grievance
+    - Track issue
+    - Track my problem
+    - Check status
+
+- intent: track_issue_hindi
+  examples: |
+    - ट्रैक
+    - शिकायत को ट्रैक करें
+    - शिकायत ट्रैक करें
+    - मुद्दे को ट्रैक करें
+    - मेरी समस्या को ट्रैक करें
+    - स्थिति जांचें
+
+- intent: track_issue_urdu
+  examples: |
+    - ٹریک
+    - شکایت کو ٹریک کریں
+    - شکایت ٹریک کریں
+    - مسئلہ کو ٹریک کریں
+    - میری پریشانی کو ٹریک کریں
+    - اسٹیٹس چیک کریں
+
+
+
