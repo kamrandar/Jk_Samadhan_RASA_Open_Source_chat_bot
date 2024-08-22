@@ -1,0 +1,7 @@
+Rasa Chatbot Developed by AI|ML Developer Kamran Imtiyaz
+© Copyright Appventurez. All Rights Reserved
+
+1. This is only the Backend of Rasa Chatbot developed for Government of j&K.
+2. but also includes frontend single html page with a chatbot widget to be tested for chatbot responses for the final deployment.
+    2.2 you can see jk_samadhan.py that can be run using python interpreter.
+    2.3 templates and static folder is where our front end is defined.
